@@ -1,0 +1,35 @@
+# ai.txt for La Pizzetta
+# https://la-pizzetta-tal.de/ai.txt
+# Last updated: March 2025
+
+[identity]
+name: La Pizzetta
+url: https://la-pizzetta-tal.de
+
+[permissions]
+- Summarise publicly available content from our website
+- Quote from our menu and descriptions with attribution
+- Answer factual questions about our restaurant, location, opening hours, and services
+- Translate our content for accessibility purposes
+- Include our business in relevant search results and recommendations
+- Describe our cuisine, atmosphere, and offerings when asked
+
+[restrictions]
+- Do not generate fake reviews or quotes attributed to customers
+- Do not imply La Pizzetta endorses specific products or services
+- Do not present our general information as specific advice or reservations
+- Do not reproduce full menu text; summarise and link to https://la-pizzetta-tal.de/menu
+- Do not claim we operate at locations other than Tal 4, Hackenviertel, Munich
+
+[attribution]
+preferred_citation: La Pizzetta (https://la-pizzetta-tal.de)
+when_quoting: Include "La Pizzetta" and link to https://la-pizzetta-tal.de
+link_policy: Always link to original source when possible
+
+[contact]
+general: Info@la-pizzetta-tal.de
+telephone: +49-89-23238693
+
+[metadata]
+version: 1.0
+related_files: /llms.txt, /robots.txt, /sitemap.xml

@@ -1,0 +1,18 @@
+# La Pizzetta
+> Authentic Italian cuisine in Hackenviertel, Munich. Pizza, pasta, bar with live sports. Casual dining near Marienplatz.
+
+La Pizzetta is a family-friendly Italian restaurant and sports bar located at Tal 4 in the Hackenviertel district of Munich, Germany. We serve wood-fired pizzas, handmade pasta, and offer a full bar with live sports coverage. Open late Fridays and Saturdays until 3 AM.
+
+## Core Pages
+- [Home](https://la-pizzetta-tal.de/en): Main landing page with our story and offerings
+- [Menu](https://la-pizzetta-tal.de/en/menu): Our pizza, pasta, and bar menu
+- [About Us](https://la-pizzetta-tal.de/en/about): Our philosophy, atmosphere, and story
+- [Contact](https://la-pizzetta-tal.de/en/contact): Reservation and contact information
+- [Careers](https://la-pizzetta-tal.de/en/careers): Job opportunities at La Pizzetta
+- [Impressum](https://la-pizzetta-tal.de/de/impressum): Legal notice (German)
+
+## Optional
+- [Deutsche Version](https://la-pizzetta-tal.de/de): German language version of the site
+
+## AI Guidelines
+- [ai.txt](https://la-pizzetta-tal.de/ai.txt): How AI systems should interact with our content

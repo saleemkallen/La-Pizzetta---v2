@@ -1,0 +1,25 @@
+# Netlify configuration for La Pizzetta - Next.js
+# https://docs.netlify.com/frameworks/next-js/
+# The Next.js plugin is auto-detected and configures the build
+
+[build]
+  command = "pnpm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Environment - set SITE_URL in Netlify Dashboard for production
+# Example: SITE_URL = "https://la-pizzetta-tal.de"
+# Or use Netlify's automatic URL: SITE_URL = "https://YOUR_SITE.netlify.app"
+
+# Headers for AI discovery files (backup - Next.js also sets these)
+[[headers]]
+  for = "/ai.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
