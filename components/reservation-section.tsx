@@ -33,7 +33,7 @@ export function ReservationSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8">
           <div className="lg:col-span-5">
             <span
-              className={`text-xs tracking-[0.3em] uppercase text-muted-foreground block mb-6 transition-all duration-700 ${
+              className={`text-xs tracking-[0.3em] uppercase text-content-muted block mb-6 transition-all duration-700 ${
                 isVisible ? "opacity-100" : "opacity-0"
               }`}
             >
@@ -57,19 +57,19 @@ export function ReservationSection() {
               <div className="flex items-start gap-4">
                 <MapPin size={18} className="text-terracotta mt-0.5 shrink-0" />
                 <div>
-                  <p className="text-sm font-sans text-foreground">{t.contact.address}</p>
-                  <p className="text-sm text-muted-foreground">{t.contact.city}</p>
-                  <p className="text-sm text-muted-foreground">{t.contact.neighbourhood}</p>
+                  <p className="text-sm font-sans text-content">{t.contact.address}</p>
+                  <p className="text-sm text-content-muted">{t.contact.city}</p>
+                  <p className="text-sm text-content-muted">{t.contact.neighbourhood}</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
                 <Phone size={18} className="text-terracotta mt-0.5 shrink-0" />
                 <div>
-                  <a href="tel:+498923238693" className="text-sm font-sans text-foreground hover:text-terracotta">
+                  <a href="tel:+498923238693" className="text-sm font-sans text-content hover:text-terracotta">
                     {t.contact.phone}
                   </a>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-content-muted">
                     {locale === "de" ? "Für Reservierungen und Anfragen" : "For reservations and inquiries"}
                   </p>
                 </div>
@@ -78,10 +78,10 @@ export function ReservationSection() {
               <div className="flex items-start gap-4">
                 <Mail size={18} className="text-terracotta mt-0.5 shrink-0" />
                 <div>
-                  <a href="mailto:Info@la-pizzetta-tal.de" className="text-sm font-sans text-foreground hover:text-terracotta">
+                  <a href="mailto:Info@la-pizzetta-tal.de" className="text-sm font-sans text-content hover:text-terracotta">
                     {t.contact.email}
                   </a>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-content-muted">
                     {locale === "de" ? "Wir antworten innerhalb von 24 Stunden" : "We reply within 24 hours"}
                   </p>
                 </div>
@@ -90,9 +90,9 @@ export function ReservationSection() {
               <div className="flex items-start gap-4">
                 <Clock size={18} className="text-terracotta mt-0.5 shrink-0" />
                 <div>
-                  <p className="text-sm font-sans text-foreground">{t.contact.hours.friSat}</p>
-                  <p className="text-sm font-sans text-foreground">{t.contact.hours.sunThu}</p>
-                  <p className="text-sm text-muted-foreground mt-1">{t.contact.hours.note}</p>
+                  <p className="text-sm font-sans text-content">{t.contact.hours.friSat}</p>
+                  <p className="text-sm font-sans text-content">{t.contact.hours.sunThu}</p>
+                  <p className="text-sm text-content-muted mt-1">{t.contact.hours.note}</p>
                 </div>
               </div>
             </div>
@@ -100,35 +100,35 @@ export function ReservationSection() {
 
           <div className="lg:col-span-6 lg:col-start-7">
             <div
-              className={`bg-charcoal p-8 lg:p-12 transition-all duration-700 delay-300 ${
+              className={`bg-white p-8 lg:p-12 transition-all duration-700 delay-300 border border-border shadow-sm ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              <p className="text-cream/60 text-sm mb-8 leading-relaxed">
+              <p className="text-content-muted text-sm mb-8 leading-relaxed">
                 {t.contact.form.info}
               </p>
 
               <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="firstName" className="text-cream/50 text-xs tracking-[0.15em] uppercase block mb-2">
+                    <label htmlFor="firstName" className="text-content-muted text-xs tracking-[0.15em] uppercase block mb-2">
                       {t.contact.form.firstName}
                     </label>
                     <input
                       id="firstName"
                       type="text"
-                      className="w-full bg-transparent border-b border-cream/20 text-cream py-3 text-sm focus:outline-none focus:border-terracotta transition-colors duration-300 placeholder:text-cream/20"
+                      className="w-full bg-transparent border-b border-border text-content py-3 text-sm focus:outline-none focus:border-terracotta transition-colors duration-300 placeholder:text-content-muted"
                       placeholder={p.firstName}
                     />
                   </div>
                   <div>
-                    <label htmlFor="lastName" className="text-cream/50 text-xs tracking-[0.15em] uppercase block mb-2">
+                    <label htmlFor="lastName" className="text-content-muted text-xs tracking-[0.15em] uppercase block mb-2">
                       {t.contact.form.lastName}
                     </label>
                     <input
                       id="lastName"
                       type="text"
-                      className="w-full bg-transparent border-b border-cream/20 text-cream py-3 text-sm focus:outline-none focus:border-terracotta transition-colors duration-300 placeholder:text-cream/20"
+                      className="w-full bg-transparent border-b border-border text-content py-3 text-sm focus:outline-none focus:border-terracotta transition-colors duration-300 placeholder:text-content-muted"
                       placeholder={p.lastName}
                     />
                   </div>
@@ -136,24 +136,24 @@ export function ReservationSection() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="email" className="text-cream/50 text-xs tracking-[0.15em] uppercase block mb-2">
+                    <label htmlFor="email" className="text-content-muted text-xs tracking-[0.15em] uppercase block mb-2">
                       {t.contact.form.email}
                     </label>
                     <input
                       id="email"
                       type="email"
-                      className="w-full bg-transparent border-b border-cream/20 text-cream py-3 text-sm focus:outline-none focus:border-terracotta transition-colors duration-300 placeholder:text-cream/20"
+                      className="w-full bg-transparent border-b border-border text-content py-3 text-sm focus:outline-none focus:border-terracotta transition-colors duration-300 placeholder:text-content-muted"
                       placeholder={p.email}
                     />
                   </div>
                   <div>
-                    <label htmlFor="phone" className="text-cream/50 text-xs tracking-[0.15em] uppercase block mb-2">
+                    <label htmlFor="phone" className="text-content-muted text-xs tracking-[0.15em] uppercase block mb-2">
                       {t.contact.form.phone}
                     </label>
                     <input
                       id="phone"
                       type="tel"
-                      className="w-full bg-transparent border-b border-cream/20 text-cream py-3 text-sm focus:outline-none focus:border-terracotta transition-colors duration-300 placeholder:text-cream/20"
+                      className="w-full bg-transparent border-b border-border text-content py-3 text-sm focus:outline-none focus:border-terracotta transition-colors duration-300 placeholder:text-content-muted"
                       placeholder={p.phone}
                     />
                   </div>
@@ -161,40 +161,40 @@ export function ReservationSection() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div>
-                    <label htmlFor="date" className="text-cream/50 text-xs tracking-[0.15em] uppercase block mb-2">
+                    <label htmlFor="date" className="text-content-muted text-xs tracking-[0.15em] uppercase block mb-2">
                       {t.contact.form.date}
                     </label>
                     <input
                       id="date"
                       type="date"
-                      className="w-full bg-transparent border-b border-cream/20 text-cream py-3 text-sm focus:outline-none focus:border-terracotta transition-colors duration-300 [color-scheme:dark]"
+                      className="w-full bg-transparent border-b border-border text-content py-3 text-sm focus:outline-none focus:border-terracotta transition-colors duration-300 [color-scheme:light]"
                     />
                   </div>
                   <div>
-                    <label htmlFor="time" className="text-cream/50 text-xs tracking-[0.15em] uppercase block mb-2">
+                    <label htmlFor="time" className="text-content-muted text-xs tracking-[0.15em] uppercase block mb-2">
                       {t.contact.form.time}
                     </label>
                     <select
                       id="time"
-                      className="w-full bg-transparent border-b border-cream/20 text-cream py-3 text-sm focus:outline-none focus:border-terracotta transition-colors duration-300 appearance-none"
+                      className="w-full bg-transparent border-b border-border text-content py-3 text-sm focus:outline-none focus:border-terracotta transition-colors duration-300 appearance-none"
                     >
-                      <option value="" className="bg-charcoal">{p.selectTime}</option>
+                      <option value="" className="bg-white">{p.selectTime}</option>
                       {t.contact.timeSlots.map((slot) => (
-                        <option key={slot} value={slot} className="bg-charcoal">{slot}</option>
+                        <option key={slot} value={slot} className="bg-white">{slot}</option>
                       ))}
                     </select>
                   </div>
                   <div>
-                    <label htmlFor="guests" className="text-cream/50 text-xs tracking-[0.15em] uppercase block mb-2">
+                    <label htmlFor="guests" className="text-content-muted text-xs tracking-[0.15em] uppercase block mb-2">
                       {t.contact.form.guests}
                     </label>
                     <select
                       id="guests"
-                      className="w-full bg-transparent border-b border-cream/20 text-cream py-3 text-sm focus:outline-none focus:border-terracotta transition-colors duration-300 appearance-none"
+                      className="w-full bg-transparent border-b border-border text-content py-3 text-sm focus:outline-none focus:border-terracotta transition-colors duration-300 appearance-none"
                     >
-                      <option value="" className="bg-charcoal">{p.selectGuests}</option>
+                      <option value="" className="bg-white">{p.selectGuests}</option>
                       {[1, 2, 3, 4, 5, 6, 7].map((n) => (
-                        <option key={n} value={n} className="bg-charcoal">
+                        <option key={n} value={n} className="bg-white">
                           {n} {n === 1 ? p.guest : p.guests}
                         </option>
                       ))}
@@ -203,20 +203,20 @@ export function ReservationSection() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="text-cream/50 text-xs tracking-[0.15em] uppercase block mb-2">
+                  <label htmlFor="message" className="text-content-muted text-xs tracking-[0.15em] uppercase block mb-2">
                     {t.contact.form.message}
                   </label>
                   <textarea
                     id="message"
                     rows={3}
-                    className="w-full bg-transparent border-b border-cream/20 text-cream py-3 text-sm focus:outline-none focus:border-terracotta transition-colors duration-300 resize-none placeholder:text-cream/20"
+                    className="w-full bg-transparent border-b border-border text-content py-3 text-sm focus:outline-none focus:border-terracotta transition-colors duration-300 resize-none placeholder:text-content-muted"
                     placeholder={p.message}
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="mt-4 bg-terracotta text-cream py-4 px-8 text-sm tracking-[0.2em] uppercase hover:bg-terracotta/90 transition-colors duration-300 self-start"
+                  className="mt-4 bg-terracotta text-white py-4 px-8 text-sm tracking-[0.2em] uppercase hover:bg-terracotta/90 transition-colors duration-300 self-start"
                 >
                   {t.contact.form.submit}
                 </button>

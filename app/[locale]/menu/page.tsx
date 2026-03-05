@@ -7,7 +7,7 @@ export default function MenuPage() {
     <main>
       <Navigation />
       <MenuPdfSection />
-      <Footer />
+      <Footer variant="menu" />
     </main>
   )
 }

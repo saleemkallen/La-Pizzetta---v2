@@ -71,20 +71,19 @@ export function CareersSection() {
             sizes="100vw"
             priority
           />
-          <div className="absolute inset-0 bg-charcoal/60" />
         </div>
 
         <div className="relative px-6 lg:px-12 py-24 lg:py-32">
           <div className="max-w-7xl mx-auto">
             <span
-              className={`text-xs tracking-[0.3em] uppercase text-cream/60 block mb-4 transition-all duration-700 ${
+              className={`text-xs tracking-[0.3em] uppercase text-content-inverse/60 block mb-4 transition-all duration-700 ${
                 heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
               {t.careers.label}
             </span>
             <h1
-              className={`font-serif text-5xl lg:text-7xl xl:text-8xl tracking-tight leading-[0.95] text-cream transition-all duration-700 delay-200 ${
+              className={`font-serif text-5xl lg:text-7xl xl:text-8xl tracking-tight leading-[0.95] text-content-inverse transition-all duration-700 delay-200 ${
                 heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
@@ -92,7 +91,7 @@ export function CareersSection() {
               <em className="text-terracotta">{t.careers.titleHighlight}</em>
             </h1>
             <p
-              className={`mt-8 text-cream/80 text-base lg:text-lg max-w-xl leading-relaxed transition-all duration-700 delay-400 ${
+              className={`mt-8 text-content-inverse/80 text-base lg:text-lg max-w-xl leading-relaxed transition-all duration-700 delay-400 ${
                 heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
@@ -105,19 +104,19 @@ export function CareersSection() {
       {/* Why Join Us */}
       <section
         ref={whyRef}
-        className="px-6 lg:px-12 py-24 lg:py-40 text-charcoal bg-cream"
+        className="px-6 lg:px-12 py-24 lg:py-40 text-content bg-cream"
         aria-label="Why join La Pizzetta"
       >
         <div className="max-w-7xl mx-auto">
           <span
-            className={`text-xs tracking-[0.3em] uppercase text-charcoal/70 block mb-6 transition-all duration-700 ${
+            className={`text-xs tracking-[0.3em] uppercase text-content-muted block mb-6 transition-all duration-700 ${
               whyVisible ? "opacity-100" : "opacity-0"
             }`}
           >
             {t.careers.why.label}
           </span>
           <h2
-            className={`font-serif text-5xl lg:text-7xl tracking-tight leading-[1.05] text-charcoal transition-all duration-700 delay-200 ${
+            className={`font-serif text-5xl lg:text-7xl tracking-tight leading-[1.05] text-content transition-all duration-700 delay-200 ${
               whyVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
@@ -142,10 +141,10 @@ export function CareersSection() {
                   className="group border-l-2 border-terracotta/30 pl-8 py-2 hover:border-terracotta transition-colors duration-500"
                 >
                   <Icon size={24} className="text-terracotta mb-4" strokeWidth={1.25} />
-                  <h3 className="font-serif text-xl lg:text-2xl tracking-tight text-charcoal mb-3">
+                  <h3 className="font-serif text-xl lg:text-2xl tracking-tight text-content mb-3">
                     {item.title}
                   </h3>
-                  <p className="text-charcoal/75 text-sm leading-relaxed">{item.desc}</p>
+                  <p className="text-content/75 text-sm leading-relaxed">{item.desc}</p>
                 </div>
               )
             })}
@@ -161,14 +160,14 @@ export function CareersSection() {
       >
         <div className="max-w-7xl mx-auto">
           <span
-            className={`text-xs tracking-[0.3em] uppercase text-cream/60 block mb-6 transition-all duration-700 ${
+            className={`text-xs tracking-[0.3em] uppercase text-content-inverse/60 block mb-6 transition-all duration-700 ${
               positionsVisible ? "opacity-100" : "opacity-0"
             }`}
           >
             {t.careers.positions.label}
           </span>
           <h2
-            className={`font-serif text-5xl lg:text-7xl tracking-tight leading-[1.05] text-cream transition-all duration-700 delay-200 ${
+            className={`font-serif text-5xl lg:text-7xl tracking-tight leading-[1.05] text-content-inverse transition-all duration-700 delay-200 ${
               positionsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
@@ -187,7 +186,7 @@ export function CareersSection() {
               >
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
                   <div>
-                    <h3 className="font-serif text-2xl lg:text-3xl text-cream tracking-tight">
+                    <h3 className="font-serif text-2xl lg:text-3xl text-content-inverse tracking-tight">
                       {role.title}
                     </h3>
                     <p className="text-terracotta text-xs tracking-[0.2em] uppercase mt-2">
@@ -196,13 +195,13 @@ export function CareersSection() {
                   </div>
                   <a
                     href={`mailto:Info@la-pizzetta-tal.de?subject=${encodeURIComponent(`Application: ${role.title}`)}`}
-                    className="inline-flex items-center gap-2 text-sm tracking-[0.15em] uppercase text-cream/80 hover:text-terracotta transition-colors shrink-0"
+                    className="inline-flex items-center gap-2 text-sm tracking-[0.15em] uppercase text-content-inverse/80 hover:text-terracotta transition-colors shrink-0"
                   >
                     {t.careers.positions.apply}
                     <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
-                <p className="mt-4 text-cream/60 text-sm leading-relaxed border-t border-cream/5 pt-6">
+                <p className="mt-4 text-content-inverse/60 text-sm leading-relaxed border-t border-cream/5 pt-6">
                   {role.short}
                 </p>
               </article>
@@ -210,7 +209,7 @@ export function CareersSection() {
           </div>
 
           <p
-            className={`mt-12 text-cream/50 text-sm italic transition-all duration-700 delay-500 ${
+            className={`mt-12 text-content-inverse/50 text-sm italic transition-all duration-700 delay-500 ${
               positionsVisible ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -222,28 +221,28 @@ export function CareersSection() {
       {/* How to Apply CTA */}
       <section
         ref={applyRef}
-        className="px-6 lg:px-12 py-24 lg:py-40 text-charcoal bg-cream"
+        className="px-6 lg:px-12 py-24 lg:py-40 text-content bg-cream"
         aria-label="How to apply"
       >
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 items-center">
             <div className="lg:col-span-5">
               <span
-                className={`text-xs tracking-[0.3em] uppercase text-charcoal/70 block mb-6 transition-all duration-700 ${
+                className={`text-xs tracking-[0.3em] uppercase text-content-muted block mb-6 transition-all duration-700 ${
                   applyVisible ? "opacity-100" : "opacity-0"
                 }`}
               >
                 {t.careers.apply.label}
               </span>
               <h2
-                className={`font-serif text-4xl lg:text-6xl tracking-tight leading-[1.1] text-charcoal transition-all duration-700 delay-200 ${
+                className={`font-serif text-4xl lg:text-6xl tracking-tight leading-[1.1] text-content transition-all duration-700 delay-200 ${
                   applyVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                 }`}
               >
                 {t.careers.apply.title}
               </h2>
               <p
-                className={`mt-8 text-charcoal/80 text-base leading-relaxed max-w-md transition-all duration-700 delay-400 ${
+                className={`mt-8 text-content/80 text-base leading-relaxed max-w-md transition-all duration-700 delay-400 ${
                   applyVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                 }`}
               >
@@ -258,35 +257,35 @@ export function CareersSection() {
             >
               <a
                 href="mailto:Info@la-pizzetta-tal.de?subject=Job%20Application%20-%20La%20Pizzetta"
-                className="group flex items-center gap-4 p-6 bg-charcoal text-cream hover:bg-charcoal/95 transition-colors duration-300"
+                className="group flex items-center gap-4 p-6 bg-charcoal text-content-inverse hover:bg-charcoal/95 transition-colors duration-300"
               >
                 <div className="w-14 h-14 flex items-center justify-center bg-terracotta/20 text-terracotta group-hover:bg-terracotta group-hover:text-cream transition-colors duration-300">
                   <Mail size={24} />
                 </div>
                 <div className="flex-1">
-                  <p className="text-xs tracking-[0.2em] uppercase text-cream/60">{t.careers.apply.email}</p>
-                  <p className="font-medium text-cream mt-1">{t.careers.apply.emailAddr}</p>
+                  <p className="text-xs tracking-[0.2em] uppercase text-content-inverse/60">{t.careers.apply.email}</p>
+                  <p className="font-medium text-content-inverse mt-1">{t.careers.apply.emailAddr}</p>
                 </div>
                 <ArrowRight size={20} className="text-terracotta group-hover:translate-x-1 transition-transform" />
               </a>
 
-              <div className="flex items-center gap-4 text-charcoal/50 text-sm">
+              <div className="flex items-center gap-4 text-content/50 text-sm">
                 <span className="uppercase tracking-wider">{t.careers.apply.or}</span>
-                <div className="flex-1 h-px bg-charcoal/20" />
+                <div className="flex-1 h-px bg-content/20" />
               </div>
 
               <a
                 href="tel:+498923238693"
-                className="group flex items-center gap-4 p-6 border-2 border-charcoal/20 text-charcoal hover:border-terracotta hover:text-terracotta transition-all duration-300"
+                className="group flex items-center gap-4 p-6 border-2 border-content/20 text-content hover:border-terracotta hover:text-terracotta transition-all duration-300"
               >
-                <div className="w-14 h-14 flex items-center justify-center border border-charcoal/20 text-charcoal group-hover:border-terracotta group-hover:text-terracotta transition-colors duration-300">
+                <div className="w-14 h-14 flex items-center justify-center border border-content/20 text-content group-hover:border-terracotta group-hover:text-terracotta transition-colors duration-300">
                   <Phone size={24} />
                 </div>
                 <div className="flex-1">
-                  <p className="text-xs tracking-[0.2em] uppercase text-charcoal/60">{t.careers.apply.phone}</p>
-                  <p className="font-medium text-charcoal mt-1">+49 89 23238693</p>
+                  <p className="text-xs tracking-[0.2em] uppercase text-content-muted">{t.careers.apply.phone}</p>
+                  <p className="font-medium text-content mt-1">+49 89 23238693</p>
                 </div>
-                <ArrowRight size={20} className="text-charcoal/40 group-hover:text-terracotta group-hover:translate-x-1 transition-all duration-300" />
+                <ArrowRight size={20} className="text-content/40 group-hover:text-terracotta group-hover:translate-x-1 transition-all duration-300" />
               </a>
 
               <a

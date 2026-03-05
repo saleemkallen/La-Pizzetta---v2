@@ -38,14 +38,14 @@ export function MenuSection() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16 lg:mb-24">
           <div>
             <span
-              className={`text-xs tracking-[0.3em] uppercase text-cream/50 block mb-6 transition-all duration-700 ${
+              className={`text-xs tracking-[0.3em] uppercase text-content-inverse/50 block mb-6 transition-all duration-700 ${
                 isVisible ? "opacity-100" : "opacity-0"
               }`}
             >
               {t.menu.label}
             </span>
             <h2
-              className={`font-serif text-5xl lg:text-8xl xl:text-9xl tracking-tight text-cream leading-[0.95] transition-all duration-700 delay-200 ${
+              className={`font-serif text-5xl lg:text-8xl xl:text-9xl tracking-tight text-content-inverse leading-[0.95] transition-all duration-700 delay-200 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
@@ -55,7 +55,7 @@ export function MenuSection() {
             </h2>
           </div>
           <p
-            className={`text-cream/60 text-sm lg:text-base max-w-sm mt-8 lg:mt-0 leading-relaxed transition-all duration-700 delay-400 ${
+            className={`text-content-inverse/60 text-sm lg:text-base max-w-sm mt-8 lg:mt-0 leading-relaxed transition-all duration-700 delay-400 ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -73,7 +73,7 @@ export function MenuSection() {
               href={`${basePath}/menu`}
               className="inline-flex items-center gap-4 group bg-cream/5 hover:bg-cream/10 border border-cream/20 px-8 py-6 transition-all duration-300"
             >
-              <span className="text-cream font-sans text-sm tracking-[0.2em] uppercase">
+              <span className="text-content-inverse font-sans text-sm tracking-[0.2em] uppercase">
                 {t.menu.viewPdf}
               </span>
               <ArrowRight className="text-terracotta group-hover:translate-x-1 transition-transform" size={20} />
@@ -106,7 +106,7 @@ export function MenuSection() {
                 />
               </div>
             </div>
-            <p className="text-cream/40 text-xs tracking-[0.2em] uppercase mt-3">
+            <p className="text-content-inverse/40 text-xs tracking-[0.2em] uppercase mt-3">
               {t.menu.seasonal}
             </p>
           </div>

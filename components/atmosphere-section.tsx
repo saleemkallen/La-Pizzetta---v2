@@ -24,19 +24,19 @@ export function AtmosphereSection() {
     <section
       ref={sectionRef}
       id="atmosphere"
-      className="relative py-24 lg:py-40 overflow-hidden text-charcoal"
+      className="relative py-24 lg:py-40 overflow-hidden text-content"
       aria-label="The Atmosphere"
     >
       <div className="px-6 lg:px-12 max-w-7xl mx-auto mb-16">
         <span
-          className={`text-xs tracking-[0.3em] uppercase text-charcoal/70 block mb-6 transition-all duration-700 ${
+          className={`text-xs tracking-[0.3em] uppercase text-content-muted block mb-6 transition-all duration-700 ${
             isVisible ? "opacity-100" : "opacity-0"
           }`}
         >
           {t.atmosphere.label}
         </span>
         <h2
-          className={`font-serif text-5xl lg:text-8xl xl:text-9xl tracking-tight leading-[0.95] text-charcoal transition-all duration-700 delay-200 ${
+          className={`font-serif text-5xl lg:text-8xl xl:text-9xl tracking-tight leading-[0.95] text-content transition-all duration-700 delay-200 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
@@ -57,7 +57,6 @@ export function AtmosphereSection() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-charcoal/20" />
       </div>
 
       <div className="px-6 lg:px-12 max-w-7xl mx-auto mt-16 lg:mt-24">
@@ -69,10 +68,10 @@ export function AtmosphereSection() {
           {t.atmosphere.features.map((feature) => (
             <div key={feature.title} className="group">
               <div className="w-8 h-px bg-terracotta mb-6 group-hover:w-16 transition-all duration-500" />
-              <h3 className="font-serif text-2xl tracking-tight text-charcoal mb-4">
+              <h3 className="font-serif text-2xl tracking-tight text-content mb-4">
                 {feature.title}
               </h3>
-              <p className="text-charcoal/80 text-sm leading-relaxed">
+              <p className="text-content/80 text-sm leading-relaxed">
                 {feature.desc}
               </p>
             </div>

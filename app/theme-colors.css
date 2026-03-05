@@ -1,0 +1,26 @@
+/**
+ * ========== COLOUR SELECTION ==========
+ * Edit these to change the site theme.
+ * Pictures use the original dark brown overlay and do not change.
+ *
+ * Sync themeColor in app/layout.tsx with --theme-accent.
+ * =====================================
+ */
+
+:root {
+  --theme-white: #FFFFFF;
+  --theme-accent: #c35616f1;
+  --theme-dark: #011305fa;
+  /* "La" – hero title and footer (separate from accent) */
+  --theme-la: #d10c0cd2;
+  /* Menu page: footer distinct colour (rich wine/burgundy, matches gradient flow) */
+  --theme-menu-footer: #021e02;
+  /* Menu hero gradient: dramatic flow from --theme-dark (011305fa) down the page */
+  --theme-menu-gradient-mid: #0b2107;
+  --theme-menu-gradient-warm: #07300f;
+  /* Menu page: gradient end (transition into footer) */
+  --theme-menu-gradient-end: #03260a;
+  --theme-overlay-opacity: 0.35;
+  --theme-accent-opacity: 0.9;
+  --theme-colorfulness: 1;
+}

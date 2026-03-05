@@ -15,8 +15,9 @@ const playfairDisplay = Playfair_Display({
   display: 'swap',
 })
 
+// themeColor: sync with --theme-accent in app/theme-colors.css
 export const viewport: Viewport = {
-  themeColor: '#2E2A25',
+  themeColor: '#AEB784',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,

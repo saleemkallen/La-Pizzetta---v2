@@ -23,7 +23,6 @@ export function HeroSection() {
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-charcoal/50" />
       </div>
 
       <div className="relative h-full flex flex-col justify-end px-6 lg:px-12 pb-16 lg:pb-24">
@@ -33,10 +32,10 @@ export function HeroSection() {
               isLoaded ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
             }`}
           >
-            <span className="block text-[clamp(3.5rem,12vw,14rem)] text-terracotta">
+            <span className="block text-[clamp(3.5rem,12vw,14rem)] text-la">
               La
             </span>
-            <span className="block text-[clamp(3.5rem,12vw,14rem)] text-cream">
+            <span className="block text-[clamp(3.5rem,12vw,14rem)] text-content-inverse">
               Pizzetta
             </span>
           </h1>
@@ -44,7 +43,7 @@ export function HeroSection() {
 
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mt-8 gap-6">
           <p
-            className={`text-cream/80 text-base lg:text-lg tracking-wide max-w-md leading-relaxed transition-all duration-1000 delay-700 ${
+            className={`text-content-inverse/80 text-base lg:text-lg tracking-wide max-w-md leading-relaxed transition-all duration-1000 delay-700 ${
               isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
             }`}
           >
@@ -56,10 +55,10 @@ export function HeroSection() {
               isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
             }`}
           >
-            <span className="text-cream/50 text-xs tracking-[0.3em] uppercase">
+            <span className="text-content-inverse/50 text-xs tracking-[0.3em] uppercase">
               {t.hero.scroll}
             </span>
-            <div className="w-px h-12 bg-cream/30 animate-pulse" />
+            <div className="w-px h-12 bg-content-inverse/30 animate-pulse" />
           </div>
         </div>
       </div>

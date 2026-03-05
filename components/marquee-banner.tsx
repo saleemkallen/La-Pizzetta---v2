@@ -11,7 +11,7 @@ export function MarqueeBanner() {
       <div className="animate-marquee flex items-center gap-8 whitespace-nowrap">
         {[...items, ...items].map((item, i) => (
           <span key={i} className="flex items-center gap-8">
-            <span className="text-cream/70 text-xs tracking-[0.25em] uppercase font-sans">
+            <span className="text-content-inverse/70 text-xs tracking-[0.25em] uppercase font-sans">
               {item}
             </span>
             <span className="text-terracotta text-lg">{"///"}</span>

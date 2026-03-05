@@ -23,9 +23,7 @@ export function Navigation() {
     { label: t.nav.home, href: basePath },
     { label: t.nav.menu, href: `${basePath}/menu` },
     { label: t.nav.about, href: `${basePath}/about` },
-    { label: t.nav.atmosphere, href: `${basePath}/about#atmosphere` },
     { label: t.nav.careers, href: `${basePath}/careers` },
-    { label: t.nav.contact, href: `${basePath}/contact` },
   ]
 
   // About and contact pages have light background at top - nav needs scrolled styling for visibility
@@ -63,19 +61,33 @@ export function Navigation() {
     return () => window.removeEventListener("mousemove", handleMouseMove)
   }, [mounted])
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = ""
+    }
+    return () => {
+      document.body.style.overflow = ""
+    }
+  }, [isMobileMenuOpen])
+
   return (
     <>
-      {/* Invisible trigger zone - move mouse to top to reveal nav */}
+      {/* Invisible trigger zone - move mouse to top to reveal nav (disabled when mobile menu is open) */}
       <div
-        className={`fixed top-0 left-0 right-0 h-8 z-[99] ${navVisible ? "pointer-events-none" : "pointer-events-auto"}`}
+        className={`fixed top-0 left-0 right-0 h-8 z-[99] ${navVisible || isMobileMenuOpen ? "pointer-events-none" : "pointer-events-auto"}`}
         onMouseEnter={() => setNavVisible(true)}
         aria-hidden
       />
       <nav
-        className={`fixed top-0 left-0 right-0 z-[100] transition-transform duration-300 ease-out ${
+        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ease-out ${
           navVisible ? "translate-y-0" : "-translate-y-full"
         } ${
-          isScrolled || needsLightNavStyle
+          isMobileMenuOpen
+            ? "bg-transparent py-6 lg:py-8 shadow-none"
+            : isScrolled || needsLightNavStyle
             ? "bg-cream/98 backdrop-blur-md py-4 shadow-lg"
             : "bg-transparent py-6 lg:py-8"
         }`}
@@ -97,7 +109,7 @@ export function Navigation() {
                 key={link.href}
                 href={link.href}
                 className={`text-sm tracking-[0.15em] uppercase transition-colors duration-500 hover:opacity-70 ${
-                  isScrolled || needsLightNavStyle ? "text-charcoal" : "text-cream"
+                  isScrolled || needsLightNavStyle ? "text-content" : "text-content-inverse"
                 }`}
               >
                 {link.label}
@@ -114,8 +126,8 @@ export function Navigation() {
                   locale === "en"
                     ? "bg-terracotta text-cream"
                     : isScrolled || needsLightNavStyle
-                    ? "text-charcoal hover:bg-charcoal/10"
-                    : "text-cream hover:bg-cream/10"
+                    ? "text-content hover:bg-content/10"
+                    : "text-content-inverse hover:bg-content-inverse/10"
                 }`}
               >
                 EN
@@ -126,8 +138,8 @@ export function Navigation() {
                   locale === "de"
                     ? "bg-terracotta text-cream"
                     : isScrolled || needsLightNavStyle
-                    ? "text-charcoal hover:bg-charcoal/10"
-                    : "text-cream hover:bg-cream/10"
+                    ? "text-content hover:bg-content/10"
+                    : "text-content-inverse hover:bg-content-inverse/10"
                 }`}
               >
                 DE
@@ -137,8 +149,8 @@ export function Navigation() {
               href={`${basePath}/contact`}
               className={`text-sm tracking-[0.15em] uppercase px-6 py-3 border transition-all duration-500 hover:bg-terracotta hover:border-terracotta hover:text-cream ${
                 isScrolled || needsLightNavStyle
-                  ? "border-charcoal text-charcoal"
-                  : "border-cream/60 text-cream"
+                  ? "border-content text-content"
+                  : "border-content-inverse/60 text-content-inverse"
               }`}
             >
               {t.nav.reserve}
@@ -148,7 +160,7 @@ export function Navigation() {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`lg:hidden relative z-10 transition-colors duration-500 ${
-              isMobileMenuOpen ? "text-cream" : isScrolled || needsLightNavStyle ? "text-charcoal" : "text-cream"
+              isMobileMenuOpen ? "text-content-inverse" : isScrolled || needsLightNavStyle ? "text-content" : "text-content-inverse"
             }`}
             aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
           >
@@ -157,9 +169,9 @@ export function Navigation() {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - z-[99] sits below nav (z-[100]) so close button stays on top */}
       <div
-        className={`fixed inset-0 z-40 bg-charcoal transition-all duration-700 flex flex-col items-center justify-center gap-8 ${
+        className={`fixed inset-0 z-[99] bg-charcoal transition-all duration-700 flex flex-col items-center justify-center gap-8 ${
           isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
@@ -170,7 +182,7 @@ export function Navigation() {
               key={link.href + link.label}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-cream font-serif text-4xl tracking-tight hover:text-terracotta"
+              className="text-content-inverse font-serif text-4xl tracking-tight hover:text-terracotta"
               style={{
                 opacity: isMobileMenuOpen ? 1 : 0,
                 transform: isMobileMenuOpen ? "translateY(0)" : "translateY(20px)",
@@ -184,13 +196,13 @@ export function Navigation() {
         <div className="flex items-center gap-4 mt-4">
           <button
             onClick={() => setLocale("en")}
-            className={`px-4 py-2 text-sm uppercase ${locale === "en" ? "text-terracotta font-bold" : "text-cream/70"}`}
+            className={`px-4 py-2 text-sm uppercase ${locale === "en" ? "text-terracotta font-bold" : "text-content-inverse/70"}`}
           >
             EN
           </button>
           <button
             onClick={() => setLocale("de")}
-            className={`px-4 py-2 text-sm uppercase ${locale === "de" ? "text-terracotta font-bold" : "text-cream/70"}`}
+            className={`px-4 py-2 text-sm uppercase ${locale === "de" ? "text-terracotta font-bold" : "text-content-inverse/70"}`}
           >
             DE
           </button>
@@ -198,7 +210,7 @@ export function Navigation() {
         <Link
           href={`${basePath}/contact`}
           onClick={() => setIsMobileMenuOpen(false)}
-          className="mt-4 text-sm tracking-[0.15em] uppercase px-8 py-3 border border-cream/40 text-cream hover:bg-terracotta hover:border-terracotta transition-all duration-300"
+          className="mt-4 text-sm tracking-[0.15em] uppercase px-8 py-3 border border-content-inverse/40 text-content-inverse hover:bg-terracotta hover:border-terracotta transition-all duration-300"
         >
           {t.nav.reserve}
         </Link>

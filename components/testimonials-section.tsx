@@ -29,14 +29,14 @@ export function TestimonialsSection() {
       <div className="px-6 lg:px-12 max-w-7xl mx-auto">
         <div className="text-center mb-16 lg:mb-24">
           <span
-            className={`text-xs tracking-[0.3em] uppercase text-cream/50 block mb-6 transition-all duration-700 ${
+            className={`text-xs tracking-[0.3em] uppercase text-content-inverse/50 block mb-6 transition-all duration-700 ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}
           >
             {t.testimonials.label}
           </span>
           <h2
-            className={`font-serif text-4xl lg:text-6xl tracking-tight text-cream transition-all duration-700 delay-200 ${
+            className={`font-serif text-4xl lg:text-6xl tracking-tight text-content-inverse transition-all duration-700 delay-200 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
@@ -60,14 +60,14 @@ export function TestimonialsSection() {
                   <Star key={j} size={14} className="fill-warm-gold text-warm-gold" />
                 ))}
               </div>
-              <blockquote className="text-cream/80 text-base lg:text-lg leading-relaxed mb-8 font-serif italic">
+              <blockquote className="text-content-inverse/80 text-base lg:text-lg leading-relaxed mb-8 font-serif italic">
                 &quot;{testimonial.text}&quot;
               </blockquote>
               <div>
-                <p className="text-cream text-sm font-sans tracking-wide">
+                <p className="text-content-inverse text-sm font-sans tracking-wide">
                   {testimonial.author}
                 </p>
-                <p className="text-cream/40 text-xs tracking-[0.15em] uppercase mt-1">
+                <p className="text-content-inverse/40 text-xs tracking-[0.15em] uppercase mt-1">
                   {testimonial.source}
                 </p>
               </div>

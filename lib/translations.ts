@@ -44,7 +44,15 @@ export const translations = {
         "Discover our selection of pizzas, pastas, and bar favourites. Download or view our full menu below.",
       viewPdf: "View Full Menu",
       downloadPdf: "Download Menu",
+      openInNewTab: "Open menu in new tab",
+      mobileHint: "If the menu doesn't scroll, tap the button above to open it in a new tab.",
       seasonal: "Seasonal selection",
+      categories: [
+        { name: "Pizza", desc: "Wood-fired classics" },
+        { name: "Pasta", desc: "Handmade daily" },
+        { name: "Bar", desc: "Wines, beers & cocktails" },
+      ],
+      reserveCta: "Ready to dine? Reserve your table.",
     },
     story: {
       label: "Our Story",
@@ -273,7 +281,15 @@ export const translations = {
         "Entdecken Sie unsere Auswahl an Pizzen, Pastagerichten und Bar-Favoriten. Laden Sie unser vollständiges Menü herunter oder sehen Sie es sich unten an.",
       viewPdf: "Vollständiges Menü anzeigen",
       downloadPdf: "Menü herunterladen",
+      openInNewTab: "Menü in neuem Tab öffnen",
+      mobileHint: "Falls das Menü nicht scrollbar ist, tippen Sie oben auf die Schaltfläche, um es in einem neuen Tab zu öffnen.",
       seasonal: "Saisonale Auswahl",
+      categories: [
+        { name: "Pizza", desc: "Klassiker aus dem Holzofen" },
+        { name: "Pasta", desc: "Täglich frisch" },
+        { name: "Bar", desc: "Weine, Biere & Cocktails" },
+      ],
+      reserveCta: "Bereit zum Genießen? Tisch reservieren.",
     },
     story: {
       label: "Unsere Geschichte",

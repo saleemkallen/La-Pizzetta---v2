@@ -23,21 +23,21 @@ export function PhilosophySection() {
   return (
     <section
       ref={sectionRef}
-      className="px-6 lg:px-12 py-24 lg:py-40 text-charcoal"
+      className="px-6 lg:px-12 py-24 lg:py-40 text-content"
       aria-label="Our Philosophy"
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
           <div className="lg:col-span-5 lg:sticky lg:top-32">
             <span
-              className={`text-xs tracking-[0.3em] uppercase text-charcoal/70 block mb-6 transition-all duration-700 ${
+              className={`text-xs tracking-[0.3em] uppercase text-content-muted block mb-6 transition-all duration-700 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
               {t.philosophy.label}
             </span>
             <h2
-              className={`font-serif text-4xl lg:text-6xl xl:text-7xl tracking-tight leading-[1.05] text-charcoal transition-all duration-700 delay-200 ${
+              className={`font-serif text-4xl lg:text-6xl xl:text-7xl tracking-tight leading-[1.05] text-content transition-all duration-700 delay-200 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
@@ -52,14 +52,14 @@ export function PhilosophySection() {
               style={{ transformOrigin: "left" }}
             />
             <p
-              className={`text-charcoal/80 text-base lg:text-lg leading-relaxed max-w-md transition-all duration-700 delay-500 ${
+              className={`text-content/80 text-base lg:text-lg leading-relaxed max-w-md transition-all duration-700 delay-500 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
               {t.philosophy.p1}
             </p>
             <p
-              className={`text-charcoal/80 text-base lg:text-lg leading-relaxed max-w-md mt-6 transition-all duration-700 delay-600 ${
+              className={`text-content/80 text-base lg:text-lg leading-relaxed max-w-md mt-6 transition-all duration-700 delay-600 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
@@ -92,7 +92,7 @@ export function PhilosophySection() {
                 />
               </div>
               <div className="w-8 h-px bg-terracotta" />
-              <p className="text-xs tracking-[0.2em] uppercase text-charcoal/70">
+              <p className="text-xs tracking-[0.2em] uppercase text-content-muted">
                 Pizza · Pasta · Bar
               </p>
             </div>

@@ -12,7 +12,7 @@ export function ImpressumSection() {
     return (
       <section className="px-6 lg:px-12 py-24 lg:py-32" aria-label="Impressum">
         <div className="max-w-3xl mx-auto">
-          <h1 className="font-serif text-4xl lg:text-5xl text-foreground tracking-tight mb-12">
+          <h1 className="font-serif text-4xl lg:text-5xl text-content tracking-tight mb-12">
             Impressum
           </h1>
           <p className="text-xs text-muted-foreground mb-8">
@@ -20,7 +20,7 @@ export function ImpressumSection() {
             Informationspflichten gemäß Art. 13 EU-Verordnung 2022/2065
           </p>
 
-          <div className="space-y-8 text-foreground">
+          <div className="space-y-8 text-content">
             <div>
               <h2 className="text-sm font-medium tracking-wider uppercase text-muted-foreground mb-2">
                 Verantwortlich für den Inhalt
@@ -162,14 +162,14 @@ export function ImpressumSection() {
   return (
     <section className="px-6 lg:px-12 py-24 lg:py-32" aria-label="Legal Notice">
       <div className="max-w-3xl mx-auto">
-        <h1 className="font-serif text-4xl lg:text-5xl text-foreground tracking-tight mb-12">
+        <h1 className="font-serif text-4xl lg:text-5xl text-content tracking-tight mb-12">
           Legal Notice / Impressum
         </h1>
         <p className="text-xs text-muted-foreground mb-8">
           Information according to § 5 German Digital Services Act (DDG)
         </p>
 
-        <div className="space-y-8 text-foreground">
+        <div className="space-y-8 text-content">
           <div>
             <h2 className="text-sm font-medium tracking-wider uppercase text-muted-foreground mb-2">
               Responsible for content

@@ -24,20 +24,20 @@ export function StorySection() {
     <section
       ref={sectionRef}
       id="story"
-      className="px-6 lg:px-12 py-24 lg:py-40 text-charcoal"
+      className="px-6 lg:px-12 py-24 lg:py-40 text-content"
       aria-label="Our Story"
     >
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 lg:mb-24">
           <span
-            className={`text-xs tracking-[0.3em] uppercase text-charcoal/70 block mb-6 transition-all duration-700 ${
+            className={`text-xs tracking-[0.3em] uppercase text-content-muted block mb-6 transition-all duration-700 ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}
           >
             {t.story.label}
           </span>
           <h2
-            className={`font-serif text-5xl lg:text-8xl xl:text-9xl tracking-tight leading-[0.95] text-charcoal transition-all duration-700 delay-200 ${
+            className={`font-serif text-5xl lg:text-8xl xl:text-9xl tracking-tight leading-[0.95] text-content transition-all duration-700 delay-200 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
@@ -77,10 +77,10 @@ export function StorySection() {
                 sizes="(max-width: 1024px) 100vw, 42vw"
               />
             </div>
-            <blockquote className="font-serif text-2xl lg:text-3xl text-charcoal leading-snug tracking-tight italic">
+            <blockquote className="font-serif text-2xl lg:text-3xl text-content leading-snug tracking-tight italic">
               {t.story.quote}
             </blockquote>
-            <p className="text-charcoal/70 text-sm mt-4 tracking-wide">
+            <p className="text-content/70 text-sm mt-4 tracking-wide">
               — {t.story.author}
             </p>
           </div>
@@ -96,10 +96,10 @@ export function StorySection() {
               key={stat.label}
               className="bg-background py-10 lg:py-14 flex flex-col items-center text-center"
             >
-              <span className="font-serif text-2xl lg:text-4xl text-charcoal tracking-tight">
+              <span className="font-serif text-2xl lg:text-4xl text-content tracking-tight">
                 {stat.number}
               </span>
-              <span className="text-xs tracking-[0.2em] uppercase text-charcoal/70 mt-3">
+              <span className="text-xs tracking-[0.2em] uppercase text-content-muted mt-3">
                 {stat.label}
               </span>
             </div>
